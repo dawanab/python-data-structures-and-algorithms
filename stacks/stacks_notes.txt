@@ -1,0 +1,29 @@
+STACKS INTRODUCTION ------------------------------------------------------>
+    > A stack is a data structure which contains an ordered set of data.
+
+    > They provide three methods for interaction:
+        1. Push - adds data to the top of the stack
+        2. Pop - returns and removes data from the top of the stack
+        3. Peek - returns data from the top of the stack without removing it
+
+    > Consider a stack as a set of weights. The only weight that you can 
+    remove (pop) from the stack is the top one. You can peek and read the top
+    weight without removing it from the stack. The last plate that you put down
+    becomes the first one that you can access. This is a Last In, First Out or
+    LIFO structure. 
+
+STACKS IMPLEMENTATION ---------------------------------------------------->
+    > Stacks can be implemented with a Linked List as the underlying data 
+    structure. A Linked List is more efficient than a list or array.
+
+    > The top of the stack is equivalent to the head node of a linked list and 
+    the bottom of the stack is equivalent to the tail node. 
+
+    > One constraint that may be placed on a stack is its size because it will 
+    limit and quantify the resources the data structure will take up when it's full.
+
+    > If you attempt to push data onto an already full stack, it will result in a 
+    stack overflow. Also, if you attempt to pop data from an empty stack, it will
+    result in a stack underflow. 
+    
+
