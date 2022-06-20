@@ -26,4 +26,35 @@ STACKS IMPLEMENTATION ---------------------------------------------------->
     stack overflow. Also, if you attempt to pop data from an empty stack, it will
     result in a stack underflow. 
     
+STACKS PUSH AND POP ------------------------------------------------------>
+    > The stack's push() and pop() methods are what we use to add and remove items
+    from it. 
+    > pop() returns the value of the item that it is removing.
+    > We can only make modifications to the top of the stack. 
 
+STACKS SIZE -------------------------------------------------------------->
+    > Helper methods simplify our code by abstracting and labeling chunks of code
+    into a new function. 
+    > The function name tells us what it does. Without this helper function, we 
+    would have to read the code to understand its meaning.
+    > The function lets us repeat the desired behavior. Without the helper, we'd 
+    have to keep reqritting the same code. 
+    > An important helper method of a stack would be one that checks if our stack
+    has room for more items. It's also helpful to have a method that checks if 
+    the stack is empty. 
+
+STACKS QUIZ -------------------------------------------------------------->
+    1. What does the pop() method do? - Checks to see if the stack is empty and 
+    removes the top item from a stack if there is an item to remove. 
+
+    2. What goes inside a stack's __init__() method? - When you instantiate a 
+    stack, the size is 0, there is no top_item yet, so we set it to None, and 
+    we give the limit paramater a default integer to help us limit the size
+    of our stack to prevent stack overflow. 
+
+    3. What does the push() method do? - Checks to see if there is enough space
+    in the stack to add a new item and then adds the item if there is space.
+
+    4. True or False: You can traverse a stack through its nodes - False; A stack 
+    can only view and make changes to the top node in the stack; however we can 
+    traverse a linked list through its nodes
