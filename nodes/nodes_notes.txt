@@ -1,0 +1,32 @@
+Nodes Introduction ----------------------------------------------------->
+    > Nodes are the fundamental building blocks of many computer science 
+    data structures. They form the basis for linked lists, stacks, queues, 
+    trees, and more. 
+
+    > An individual noode contains data and links to other nodes. Each data
+    structure adds additional constriaints or behavior features to create
+    the desired structure. 
+
+Nodes Detail ----------------------------------------------------------->
+    > The data contained within a node can be a variety of types: integer, 
+    string, decimal, array, or nothing (null).
+
+    > The link or links within the node are sometimes referred to as pointers.
+
+    > Typically, data structures implement nodes with one or more links. If 
+    these links are null, it denotes that you have reached the end of the 
+    particular node or link path you were following. 
+
+Node Linking ------------------------------------------------------------>
+    > Due to the data structure, nodes may only be linked to from a single
+    other node. If you inadventently remove the single link to a node, that 
+    node's data and any linked nodes could be "lost" to your application. 
+    When this happens to a node, it is called an orphaned node. 
+
+
+Extra Quiz ------------->
+    1. Which two features do most nodes contain? - Data and links to other
+    nodes.
+
+    2. A node containing only null pointers indicates what? - You are
+    at the end of the node path you were following 
