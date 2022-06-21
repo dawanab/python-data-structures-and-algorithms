@@ -35,10 +35,8 @@ STACKS PUSH AND POP ------------------------------------------------------>
 STACKS SIZE -------------------------------------------------------------->
     > Helper methods simplify our code by abstracting and labeling chunks of code
     into a new function. 
-    > The function name tells us what it does. Without this helper function, we 
-    would have to read the code to understand its meaning.
     > The function lets us repeat the desired behavior. Without the helper, we'd 
-    have to keep reqritting the same code. 
+    have to keep rewriting the same code. 
     > An important helper method of a stack would be one that checks if our stack
     has room for more items. It's also helpful to have a method that checks if 
     the stack is empty. 
