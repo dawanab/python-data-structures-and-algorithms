@@ -40,3 +40,41 @@ QUEUES IMPLEMENTATION ----------------------------------------->
     queue will result in a queue overflow. If you attempt to dequeue data
     from an empty queue, it will result in a queue underflow. 
 
+    > Bounded queues require limit on the number of nodes that can be 
+    contained, while other queues do not. To account for this, we can add
+    a size property to keep track of the queue's current size, and a 
+    max_size property limit the total node count
+
+    > Enqueue is another way of saying "add to a queue". When using enqueue(),
+    there are three scenarios that we are concered with when adding a node to
+    queue:
+        1. The queue is empty, so the node we're adding is both the head 
+        and tail of the queue
+        2. The queue has at least one other node, so the added node becomes
+        the new tail
+        3. The queue is full, so the node will not get added because we 
+        don't want the queue to 'overflow'.
+
+    > Dequeue is another way of saying "remove from a queue". When using
+    dequeue(), there are three scenarios that we are concered about:
+        1. The queue is empty, so we cannot remove or return any nodes
+        lest we run into queue 'underflow'
+        2. The queue has one node, so when we remove it, the queue will
+        be empty and we need to reset the queue's head and tail to None
+        3. The queue has more than one node, and we just remove the head
+        node and reset the head to the following node 
+
+QUEUE QUIZ --------------------------------------------------------------->
+    1. is_empty() is a useful mathod for preventing? - Queue underflow may
+    occur when we try to remove items from a queue when there are no items 
+    to remove.
+
+    2. Which two Queue methods should tell alert that the queue is empty?
+    - dequeue() and peek(); if the queue is empty, then it is not possible
+    to view or remove the value of the first item
+
+    3. Why is has_space() a useful method for the Queue class? - It allows
+    us to see if we can enqueue() a new value on the end of the queue
+
+    4. If you instantiate an empty queue, what should self.head and self.tail
+    be? - None and None
