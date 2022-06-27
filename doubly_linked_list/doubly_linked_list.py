@@ -1,6 +1,3 @@
-from asyncio import current_task
-
-
 class Node:
     def __init__(self, value, next_node = None, prev_node = None):
         self.value = value
