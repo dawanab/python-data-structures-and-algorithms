@@ -1,0 +1,85 @@
+DOUBLY LINKED LIST INTRODUCTION ------------------------------------->
+    > A doubly linked list is comprised of a series of nodes.
+    > Each node contains data and two links (pointers) to the next
+    and previous nodes in the list. 
+    > The head node's previous node is set to null and the tail node's 
+    next pointer is set to null. 
+    > Common operations on a doubly linked list are: adding nodes to both
+    ends of the list, removing nodes from both ends of the list, finding and
+    removing a node from anywhere in the list, and traversing the list.
+
+ADDING TO THE HEAD ------------------------------------------------>
+    > When we add to a doubly linked list, we need to first check for 
+    a current head. If not, then the list is empty and we just make our
+    new node the head and tail of the list, with the pointers being null.
+
+    > If the list is not empty, we need to:
+        1. set the current head's previous pointer to the new head
+        2. set the new head's next pointer to the current head
+        3. set the new head's previous pointer to null 
+
+ADDING TO THE TAIL  ------------------------------------------------>
+    > If the list is empty, then we make a new node the head and tail 
+    of the list and set the pointers to null.
+
+    > If the list is not empty, we need to:
+        1. set the current tail's next pointer to null
+        2. set the new tail's previous pointer to the current tail
+        3. set the new tail's next pointer to null 
+
+REMOVING THE HEAD -------------------------------------------------->
+    > Removing the head entails updating the pointer at the beginning 
+    of the list. Set the previous pointer of the new head to null and 
+    update the head property of the list.
+
+    Pseudocode:
+    > Check of there's a current head to the list
+        > if there's not a current head (empty list), there's nothing to remove.
+    > Otherwise, update the list's head to be the current head's next node
+    > If the updated head != None (list is not empty):
+        > set the head's previous node to None 
+    > If the removed head was also the tail of the list (only 1 element):
+        > call the remove_tail()
+    > Return the removed head's value
+
+REMOVING THE TAIL -------------------------------------------------->
+    > Removing the tail entails updating the pointer at the end of the list.
+    > Set the next pointer of the new tail to null, and update the tail 
+    property.
+
+    Pseudocode:
+    > Check if there's a current tail to the list
+        > If there's not a current tail, the list is empty; nothing to remove
+    > Otherwise, update the list's tail to be the current tail's prev node
+    > If the updated tail != None:
+        > set the tail's next node to None
+    > If the removed tail was also the head of the list:
+        > call remove_head()
+    > return the old tail's data 
+
+REMOVING FROM THE MIDDLE OF THE LIST ------------------------------->
+    > We need to update two pointers when removing from the middle of 
+    the list. 
+    > Set the removed node's previous node's next pointer to its 
+    following node.
+    > Set the removed node's following previous pointer to its 
+    preceding node 
+
+REMOVE BY VALUE (Pseudocode) ---------------------------------------->
+    > Iterate through the list to find the matching node
+    > If there is no mathing element in the list:
+        > return None
+    > If there is a matching node, check to see if it is the head or tail:
+        > If so, call either remove_head() or remove_tail()
+    > If matching node is not head or tail, it's in the middle:
+        > remove it by resetting the pointers of its prev and next nodes
+    > return the node's value property 
+    
+NODE CLASS AND CONSTRUCTOR ----------------------------------------->
+    > For the doubly linked list class, we want the following methods:
+        1. add a new node to the head of the list
+        2. add a new node to the tail of the list
+        3. remove a node from the head of the list
+        4. remove a node from the tail of the list
+        5. find and remove a specific node by its value
+        6. print out the nodes in the list in order from head to tail 
