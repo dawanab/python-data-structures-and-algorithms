@@ -1,0 +1,22 @@
+# Swapping Elements in A Linked List 
+    > Given a LL and the elements to be swapped (val1, val2), we need
+    to keep track of four values:
+        1. node1 - the node that matches val1
+        2. node1_prev - node1's previous node
+        3. node2 - the node that matches val2
+        4. node2_prev - node2's previous node
+
+    > Given an input of a LL, val1 and val2, the pseudocode is:
+        1. Iterate through the list to look for the node that matches
+        val1 to be swapped (node1), keeping track of the node's previous 
+        node as you iterate (node1_prev)
+        2. Repeat step 1 to find the node that matches node2 
+        3. If node1_prev is None, node1 was the head of the list: 
+            > set the list's head to node2
+        4. Otherwise, set node1_prev's next node to node2
+        5. If node2_prev is None:
+            > set the list's head to node1
+        6. Otherwise, set node2_prev's next node to node1
+        7. Set node1's next node to node2's next node
+        8. Set node2's next node to node1's next node 
+ 
