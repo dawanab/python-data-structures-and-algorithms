@@ -1,0 +1,9 @@
+Hash Maps Introduction ---------------------------------------------------->
+    > Hash maps key their related values, and they are one of the most 
+    efficient data structures as it realtes to retrieving stored data. 
+
+    > They are efficient because they key associated with every value allows 
+    for faster retrieval later on. 
+    
+    > They are best used when you're solving problems where you have to both
+    store and retrieve data

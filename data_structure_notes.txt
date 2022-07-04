@@ -1,0 +1,18 @@
+DIFFERENCE BETWEEN LINEAR AND NON-LINEAR DATA STRUCTURES:
+    I. Linear Data Structure - data structures where the data elements are 
+    arranged sequentially or linearly where each element is attached to its 
+    previous and next adjacent is a linear data structure. 
+        > They are single level, which means we can traverse all of the 
+        elements in a single run. 
+        > They are easy to implement because the computer memory is arranged
+        in a linear way. 
+        > Ex) array, stack, queue, linked list, hash tables, etc. 
+
+
+    II. Non-Linear Data Structure - data structures where data elements are 
+    not arranged sequentially or linearly are non-linear data structures.
+        > These are not single level. Therefore, we can't traverse all of the 
+    elements in one single run. 
+        > It utilizes computer memmory efficiently in comparison to a 
+        linear data structure
+        > Ex) trees, graphs, hash tables
