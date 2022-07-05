@@ -1,9 +1,31 @@
 Hash Maps Introduction ---------------------------------------------------->
     > Hash maps key their related values, and they are one of the most 
     efficient data structures as it realtes to retrieving stored data. 
-
     > They are efficient because they key associated with every value allows 
     for faster retrieval later on. 
-    
     > They are best used when you're solving problems where you have to both
     store and retrieve data
+
+Tables -------------------------------------------------------------------->
+    > A data structure's main utility is to have data structured in a way that 
+    represents how people will use that data. 
+        ** In some cases, the primaryfunction of that data is to be traversed 
+        through like a list, so we use a data structure that allows for easier
+        iteration, like a linked list.
+        ** In other cases, the usefulness comes from specifying interrelationships
+        within the data 
+        ** For example, a table with only two columns, represents a special
+        relationship that some call a "map". 
+
+Maps ----------------------------------------------------------------------->
+    > Being a map means relating two pieces of information, with another 
+    requirement:
+        ** When speaking of a map, we describe inputs as the keys to the map
+        ** We refer the output is the value at a given key 
+
+    > In order for a relationship to be a map, every key that is used can only 
+    be the key to a single value; there doesn't need to be a value for every 
+    possible key, there just can't be more than one value for a given key
+
+Hash Map Methodology -------------------------------------------------------->
+    > 
