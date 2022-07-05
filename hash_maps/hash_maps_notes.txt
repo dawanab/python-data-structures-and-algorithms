@@ -28,4 +28,47 @@ Maps ----------------------------------------------------------------------->
     possible key, there just can't be more than one value for a given key
 
 Hash Map Methodology -------------------------------------------------------->
+    > With a map, we don't care about the sequence of the data, we only care 
+    that a given input gives the accurate output; however, computers care more 
+    about values than relationships, so we have to trick the computer
+    
+    > We trick the computer by using a structure that it's already familiar with:
+    an array; an array uses indices to keep track of values in memory, so we need 
+    to turn each key in our map into an index in our array 
+        ** In order to do this, we use hashing functions; A hash function is useful 
+        in many domains, but for data structure, the most important aspect is that 
+        a hashing function returns an array index as output 
+
+Hash Functions --------------------------------------------------------------->
+    > A hash function takes data as input and returns an array index as output
+    > In order for it to return an array index, our hash map implementation needs 
+    to know the size of our array. 
+
+    > The hash function needs to first compute a value using some scoring metric:
+    this is the hash value, hash code, or just the hash 
+    > The implementation then takes that hash value mod the size of the array 
+    > Hash functions are also known as compression functions; because of this, 
+    hashing is not a reversible process
+
+Basic Hash Maps --------------------------------------------------------------->
+    1. First, we need some sort of associated data that we're hoping to preserve 
+    2. Secondly, we need an array of a fixed size to insert our data into 
+    3. Lastly, we need a hash function that translates the keys in our array into 
+    indexes into the array; the storage location at the index given by a hash is 
+    called the hash bucket 
+
+Collisions -------------------------------------------------------------------->
+    > It's likely that our hash function might produce the same hash for two 
+    different keys. This is known as a hash collision
+        > One way to resolve hash collisions is separate chaining; this strategy avoids
+        collisions by updating the underlying data structure. Instead of an array of 
+        values that are mapped to by hashes, it could be an array of linked lists
+
+Separate Chaining -------------------------------------------------------------->
+    > If the value of the array at the hash function's returned index is empty, a new 
+    linked list is created with the value as the first element of the linked list.
+    If a linked list already exists at the address, append the value to the linked 
+    list given 
+
+Saving Keys --------------------------------------------------------------------->
     > 
