@@ -71,4 +71,59 @@ Separate Chaining --------------------------------------------------------------
     list given 
 
 Saving Keys --------------------------------------------------------------------->
-    > 
+    > A hash resolution strategy like separate chaining involves assigning two keys 
+    with the same hash to different parts of the underlying data structure
+    > If we save both the key and the value, then we will be able to check against 
+    the saved key when we're accessing data in a hash map. By saving the key along 
+    with the value, we'll be avoiding having two keys with the same hash code where 
+    we might not be able to distinguish which value goes with a given key 
+
+    > When we read or write a value for a key we would do the following:
+        1. calculate the hash for the key 
+        2. find the appropriate index for that hash
+        3. begin iterating through our linked list
+    > For each element, if the saved key is the same as out key, return the value; 
+    otherwise, continue iterating through the list comparing the keys saved in 
+    that list with our key 
+
+Open Addressing: Linear Probing  -------------------------------------------------->
+    > Another hash collision strategy is open addressing
+    > In open addressing, we stick to the array as out underlying data structure, but 
+    we continue looking for a new index to save our data if the first result of our 
+    hash function has a different key's data 
+
+    > A common open method of open addressing is called probing.
+    > Probing means continuing to find new array indicies in a fixed sequence until
+    an empty index is found 
+
+Other Open Addressing Techniques ------------------------------------------------->
+    > quadratic probing open addressing system - avoids clustering 
+    > Clustering is what happens when a single hash collision causes additional 
+    hash collisions
+
+===================================================================================
+REVIEW: 
+Hash map: A key-value store that uses an array and a hashing function to save and retrieve values.
+Key: The identifier given to a value for later retrieval.
+Hash function: A function that takes some input and returns a number.
+Compression function: A function that transforms its inputs into some smaller range of possible outputs.
+
+Recipe for saving to a hash table:
+- Take the key and plug it into the hash function, getting the hash code.
+- Modulo that hash code by the length of the underlying array, getting an array index.
+- Check if the array at that index is empty, if so, save the value (and the key) there.
+- If the array is full at that index continue to the next possible position depending on your collision strategy.
+
+Recipe for retrieving from a hash table:
+- Take the key and plug it into the hash function, getting the hash code.
+- Modulo that hash code by the length of the underlying array, getting an array index.
+- Check if the array at that index has contents, if so, check the key saved there.
+- If the key matches the one you're looking for, return the value.
+- If the keys don't match, continue to the next position depending on your collision strategy.
+
+===================================================================================
+1. What does the collision strategy called Open Addressing do when it finds a collision?
+    > Looks for another cell in the underlying array to add the value to 
+
+2. How does a hash map turn the hash code for something into an array index?
+    > Using the modulus operator, usually via a compression method
