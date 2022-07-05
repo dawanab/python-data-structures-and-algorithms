@@ -1,0 +1,25 @@
+Creating the Hash Map Class ------------------------------------------------->
+    > Hash Maps are efficient key-value stores. The underlying data structure 
+    used is an array. A value is stored at an array index determined by 
+    plugging the key into a hash function.
+
+    > For real-world use cases in which a key-value store is needed, Python
+    offers a built-in hash table implementation with dictionaries. 
+
+Creating the Hashing Function ----------------------------------------------->
+    > A hashing function takes a key and returns an index into the underlying
+    array. They need to be fast to compute. 
+
+    > The encode() method converts a string into its corresponding bytes, 
+    a list-like object with the numerical representation of each
+    character in the string
+
+Creating the Compression Function -------------------------------------------->
+    > Hashing functions return a wide range of integers. We need to turn these
+    into useful indicies for our array by using a compression function. 
+
+    > A compression function uses modular arithmetic to calculate an array index 
+    for a hash map when given a hash code 
+
+Defining the Setter ---------------------------------------------------------->
+    > 
