@@ -1,4 +1,4 @@
-Linear Search Introduction ----------------------------------------------->
+Linear Search Introduction (Searching Arrays) ----------------------------------------------->
     > The linear search algorithm checks whether a value is an element in 
     a list by scanning the elements of a list one-by-one.
 
