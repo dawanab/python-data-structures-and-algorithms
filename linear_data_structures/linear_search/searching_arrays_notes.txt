@@ -1,12 +1,15 @@
-Linear Search Introduction (Searching Arrays) ----------------------------------------------->
-    > The linear search algorithm checks whether a value is an element in 
-    a list by scanning the elements of a list one-by-one.
+Linear Search Introduction (Searching Arrays) ----------------------------->
+    > The linear search algorithm (sequential search) checks whether a value 
+    is an element in a list by scanning the elements of a list one-by-one.
+        >> It checks every item in the list in order from the beginning to 
+        the end until it finds a target value. 
 
     > It's iterative approach to finding a target value is useful in solving
     search problems with unsorted data. 
 
 
 Implement Linear Search -------------------------------------------------->
+🟢 Finding Elements in Lists: 
     > Linear search is used to search for a target value in a list. Each 
     element is compared against the target value until the matching
     value is found. 
@@ -15,12 +18,20 @@ Implement Linear Search -------------------------------------------------->
     of the matching element. Otherwise, a ValueError will be raised to denote
     that the matching value was not found. 
 
-    > The pseudocode for linear search is:
+    🟡 The pseudocode for linear search is:
         # For each element in the search_list
             # if element equal target value then
                 # return its index
         # if element is not found then
             # raise a ValueError
+
+    🟡 The steps are: 
+        1️⃣ Examine the first element of the list 
+        2️⃣ If the first element is equal to the target value, stop.
+        3️⃣ If the first element is not equal to the target value, check the 
+        next element in the list.
+        4️⃣ Continue steps 1 -2 until the element is found or the end of 
+        the list is reached. 
 
 
 Finding Duplicates ------------------------------------------------------->
@@ -45,3 +56,28 @@ Finding the Maximum Value ------------------------------------------------>
                 # if element is greater than the element at max_value_index
                     # Set max_value_index equal to the idx of the element
         # return max_value_index
+
+
+Best Case Performance ----------------------------------------------------->
+    > Linear search is not the most efficient search algorithm. However, it is 
+    a good choice if you expect to find the target value at the beginning of 
+    the list, or if you have a small list. 
+
+    > The best case performance occurs when the target value exists in the list 
+    and is in the first position of the list. In this case, the algorithm will 
+    only have to make one comparison. The time complexity for linear search 
+    in its best case is O(1). 
+
+
+Worst Case Performace ------------------------------------------------------>
+    > There are two worst cases for linear search:
+        1️⃣ when the target value is at the end of the list
+        2️⃣ when the target value is not in the list
+    > In both cases, the algorithm is required to scan the entire list of N 
+    elements and makes N comparisons.
+        >>> In this case, the time complexity in worst case is O(N).
+
+    > The time complexity for linear search in its average case is O(N/2).
+    
+    > A time complexity of O(N) means the number of comparisons is proportional 
+    to the number of elements, N, in the list.
